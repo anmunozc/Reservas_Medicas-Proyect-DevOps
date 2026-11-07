@@ -1,0 +1,45 @@
+
+name: Validacion del Proyecto DevOps
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validar-proyecto:
+    name: Verificar estructura del proyecto
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos requeridos
+        run: |
+          echo "Iniciando validacion del proyecto..."
+
+          archivos=(
+            "src/index.html"
+            "src/styles.css"
+            "Dockerfile"
+            "docker-compose.yml"
+            ".env.example"
+            ".gitignore"
+            "README.md"
+          )
+
+          for archivo in "${archivos[@]}"; do
+            if [ -f "$archivo" ]; then
+              echo "OK: $archivo"
+            else
+              echo "ERROR: No se encuentra $archivo"
+              exit 1
+            fi
+          done
+
+          echo "Validacion completada correctamente."
