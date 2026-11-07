@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma web para simular la reserva de horas médicas.">
+    <title>Reserva de Horas Médicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">+</span>
+                <h1>Centro Médico Salud</h1>
+            </div>
+
+            <nav class="navigation">
+                <a href="#inicio">Inicio</a>
+                <a href="#reserva">Reservar hora</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Sección de bienvenida -->
+        <section class="hero" id="inicio">
+            <div class="container">
+                <h2>Tu salud es nuestra prioridad</h2>
+                <p>
+                    Agenda tu próxima consulta médica de manera sencilla
+                    y encuentra la atención que necesitas.
+                </p>
+                <a href="#reserva" class="btn-primary">Reservar una hora</a>
+            </div>
+        </section>
+
+        <!-- Formulario de reserva -->
+        <section class="booking-section" id="reserva">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Reserva tu hora médica</h2>
+                    <p>Completa los siguientes datos para simular tu reserva.</p>
+                </div>
+
+                <form class="booking-form">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        <input
+                            type="text"
+                            id="rut"
+                            name="rut"
+                            placeholder="Ejemplo: 12.345.678-9"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="correo@ejemplo.cl"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="+56 9 1234 5678"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especialidad">Especialidad médica</label>
+                        <select id="especialidad" name="especialidad" required>
+                            <option value="">Selecciona una especialidad</option>
+                            <option value="medicina-general">Medicina General</option>
+                            <option value="pediatria">Pediatría</option>
+                            <option value="cardiologia">Cardiología</option>
+                            <option value="ginecologia">Ginecología</option>
+                            <option value="traumatologia">Traumatología</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medico">Profesional médico</label>
+                        <select id="medico" name="medico" required>
+                            <option value="">Selecciona un profesional</option>
+                            <option value="medico-1">Dr. Juan Pérez</option>
+                            <option value="medico-2">Dra. María González</option>
+                            <option value="medico-3">Dr. Carlos Muñoz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha de atención</label>
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora">Horario disponible</label>
+                        <select id="hora" name="hora" required>
+                            <option value="">Selecciona un horario</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="motivo">Motivo de la consulta</label>
+                        <textarea
+                            id="motivo"
+                            name="motivo"
+                            rows="4"
+                            placeholder="Describe brevemente el motivo de tu consulta"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn-secondary">
+                            Limpiar formulario
+                        </button>
+
+                        <button type="button" class="btn-primary">
+                            Solicitar hora
+                        </button>
+                    </div>
+
+                </form>
+
+                <p class="form-note">
+                    Esta aplicación es una demostración académica.
+                    Los datos ingresados no se almacenan ni generan
+                    una reserva médica real.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Información de contacto -->
+        <section class="contact-section" id="contacto">
+            <div class="container">
+                <h2>Información de contacto</h2>
+                <p>Centro Médico Salud</p>
+                <p>Atención de lunes a viernes</p>
+                <p>Correo: contacto@centromedico.cl</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Centro Médico Salud.
+                Proyecto académico desarrollado para la asignatura DevOps.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
