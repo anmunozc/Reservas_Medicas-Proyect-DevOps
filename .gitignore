@@ -1,0 +1,28 @@
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Dependencias y paquetes
+node_modules/
+
+# Archivos temporales y registros
+*.log
+logs/
+tmp/
+temp/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración local de editores
+.vscode/*
+!.vscode/extensions.json
+
+# Archivos de respaldo
+*.bak
+*.tmp
+*.swp
